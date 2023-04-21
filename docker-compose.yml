@@ -1,0 +1,9 @@
+version: '3'
+services:
+  nginx_web:
+    image: nginx:alpine
+    restart: unless-stopped
+    volumes:
+      - ./www:/usr/share/nginx/html
+    ports:
+      - "9000:80"
